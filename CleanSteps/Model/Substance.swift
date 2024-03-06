@@ -8,7 +8,7 @@
 import Foundation
 
 /// Enumeration representing various addictive substances.
-enum Substance: String, CaseIterable {
+enum Substance: String, Codable, CaseIterable {
     // Addictive substances with descriptions
     case alcohol = "Alcohol"
     case nicotine = "Nicotine"

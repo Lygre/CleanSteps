@@ -53,6 +53,7 @@
 		1E450C4B2B98499000479D86 /* CleanStepsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanStepsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1E450C5A2B984A5900479D86 /* Addiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		1E450C5D2B984C6600479D86 /* Substance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Substance.swift; sourceTree = "<group>"; };
+		1E450C602B9855A100479D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		1E450C2A2B98498E00479D86 /* CleanSteps */ = {
 			isa = PBXGroup;
 			children = (
+				1E450C602B9855A100479D86 /* Info.plist */,
 				1E450C592B9849D000479D86 /* View */,
 				1E450C582B9849C900479D86 /* Model */,
 				1E450C2B2B98498E00479D86 /* CleanStepsApp.swift */,
@@ -454,8 +456,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CleanSteps/Preview Content\"";
 				DEVELOPMENT_TEAM = F54NBB76Q7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CleanSteps/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CleanSteps;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -492,8 +498,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CleanSteps/Preview Content\"";
 				DEVELOPMENT_TEAM = F54NBB76Q7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CleanSteps/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CleanSteps;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
