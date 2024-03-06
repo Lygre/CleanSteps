@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E450C2C2B98498E00479D86 /* CleanStepsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C2B2B98498E00479D86 /* CleanStepsApp.swift */; };
 		1E450C2E2B98498E00479D86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C2D2B98498E00479D86 /* ContentView.swift */; };
-		1E450C302B98498E00479D86 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C2F2B98498E00479D86 /* Item.swift */; };
 		1E450C322B98499000479D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E450C312B98499000479D86 /* Assets.xcassets */; };
 		1E450C362B98499000479D86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E450C352B98499000479D86 /* Preview Assets.xcassets */; };
 		1E450C402B98499000479D86 /* CleanStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C3F2B98499000479D86 /* CleanStepsTests.swift */; };
@@ -19,6 +18,7 @@
 		1E450C5C2B984A5900479D86 /* Addiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C5A2B984A5900479D86 /* Addiction.swift */; };
 		1E450C622B985DC000479D86 /* Savings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C612B985DC000479D86 /* Savings.swift */; };
 		1E450C632B985DC000479D86 /* Savings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C612B985DC000479D86 /* Savings.swift */; };
+		1E8E20EB2B98FB3C00A053BF /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E20EA2B98FB3C00A053BF /* SignInWithAppleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		1E450C282B98498E00479D86 /* CleanSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E450C2B2B98498E00479D86 /* CleanStepsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanStepsApp.swift; sourceTree = "<group>"; };
 		1E450C2D2B98498E00479D86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1E450C2F2B98498E00479D86 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1E450C312B98499000479D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E450C332B98499000479D86 /* CleanSteps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CleanSteps.entitlements; sourceTree = "<group>"; };
 		1E450C352B98499000479D86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		1E450C5A2B984A5900479D86 /* Addiction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addiction.swift; sourceTree = "<group>"; };
 		1E450C602B9855A100479D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1E450C612B985DC000479D86 /* Savings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savings.swift; sourceTree = "<group>"; };
+		1E8E20EA2B98FB3C00A053BF /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,6 @@
 		1E450C582B9849C900479D86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E450C2F2B98498E00479D86 /* Item.swift */,
 				1E450C5A2B984A5900479D86 /* Addiction.swift */,
 				1E450C612B985DC000479D86 /* Savings.swift */,
 			);
@@ -154,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				1E450C2D2B98498E00479D86 /* ContentView.swift */,
+				1E8E20EA2B98FB3C00A053BF /* SignInWithAppleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,8 +291,8 @@
 				1E450C2E2B98498E00479D86 /* ContentView.swift in Sources */,
 				1E450C5B2B984A5900479D86 /* Addiction.swift in Sources */,
 				1E450C622B985DC000479D86 /* Savings.swift in Sources */,
-				1E450C302B98498E00479D86 /* Item.swift in Sources */,
 				1E450C2C2B98498E00479D86 /* CleanStepsApp.swift in Sources */,
+				1E8E20EB2B98FB3C00A053BF /* SignInWithAppleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +475,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lygre.CleanSteps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,7 +517,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lygre.CleanSteps;
 				PRODUCT_NAME = "$(TARGET_NAME)";

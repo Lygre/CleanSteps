@@ -18,13 +18,13 @@ import CloudKit
 @Model
 final class Addiction {
     /// The addictive substance being tracked.
-    var substance: Substance
-
+    var substance: Substance = Substance.notSelected
+    
     /// The user's motivation or reason for tracking this addiction.
-    var reason: String
+    var reason: String = ""
     
     /// A boolean property to determine whether the addiction is enabled for tracking in the app.
-    var isEnabled: Bool
+    var isEnabled: Bool = true
     
     /// The date when the user started their sobriety journey for this addiction.
     var sobrietyDate: Date?
@@ -36,7 +36,7 @@ final class Addiction {
     var nextMilestone: Date?
     
     /// The number of fellow users who share the same milestone as their next milestone for this addiction.
-    var fellowUsersCount: Int
+    var fellowUsersCount: Int?
     
     /// The duration of abstinence from the addictive substance, calculated based on `sobrietyDate`.
     var cleanTime: TimeInterval {
@@ -55,7 +55,7 @@ final class Addiction {
     
     /// The savings associated with this addiction.
     @Relationship(deleteRule: .cascade, inverse: \Savings.addiction)
-    var savings = [Savings]()
+    var savings: [Savings]? = [Savings]()
     
     /// Initializes an Addiction object with the specified parameters.
     ///
@@ -71,11 +71,11 @@ final class Addiction {
     init(
         substance: Substance,
         reason: String,
-        isEnabled: Bool,
+        isEnabled: Bool = true,
         sobrietyDate: Date?,
         lastMilestone: Date?,
         nextMilestone: Date?,
-        fellowUsersCount: Int
+        fellowUsersCount: Int?
     ) {
         self.substance = substance
         self.reason = reason
@@ -114,6 +114,7 @@ extension Addiction {
         case syntheticCannabinoids = "Synthetic Cannabinoids"
         case syntheticCathinones = "Synthetic Cathinones"
         case syntheticOpioids = "Synthetic Opioids"
+        case notSelected = "Not Selected"
         
         /// A brief description of the addictive substance.
         var description: String {
@@ -158,9 +159,11 @@ extension Addiction {
                 return "Synthetic stimulant drugs that are similar to cathinones found in the khat plant, often sold as 'bath salts' or 'legal highs.'"
             case .syntheticOpioids:
                 return "Lab-made drugs that mimic the effects of natural opioids, often more potent and dangerous than traditional opioids."
+            case .notSelected:
+                return "Substance Not Selected"
             }
         }
     }
-
+    
     
 }

@@ -14,16 +14,13 @@ import CloudKit
 @Model
 final class Savings {
     /// The amount saved for the addiction.
-    var amountSaved: Double
-    
-    /// The unit of measurement for the savings (e.g., money, time, calories).
-    var unit: String
+    var amountSaved: Double = 0.0
     
     /// The type of savings.
-    var savingsType: SavingsType
+    var savingsType: SavingsType = SavingsType.money
     
     /// The periodicity at which savings are calculated (per day or per week).
-    var periodicity: Periodicity
+    var periodicity: Periodicity = Periodicity.perDay
     
     /// The relationship to the addiction associated with this savings.
     @Relationship var addiction: Addiction?
@@ -43,7 +40,6 @@ final class Savings {
         addiction: Addiction?
     ) {
         self.amountSaved = amountSaved
-        self.unit = unit
         self.savingsType = savingsType
         self.periodicity = periodicity
         self.addiction = addiction
@@ -59,6 +55,19 @@ extension Savings {
         case time = "Time"
         case calories = "Calories"
         case custom = "Custom"
+        
+        var unit: String {
+            switch self {
+            case .money:
+                return "$"
+            case .time:
+                return "hrs"
+            case .calories:
+                return "cal"
+            case .custom:
+                return ""
+            }
+        }
         
     }
     
