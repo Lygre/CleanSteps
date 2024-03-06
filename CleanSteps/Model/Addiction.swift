@@ -16,18 +16,10 @@ import CloudKit
 ///
 /// - Note: This class is designed to be used with SwiftData for persistence and synchronization with CloudKit.
 @Model
-final class Addiction {
+class Addiction {
     /// The addictive substance being tracked.
     var substance: Substance
-    
-    /// Additional information about the addictive substance.
-    ///
-    /// This property provides detailed information about the addictive substance, including its effects,
-    /// risks, and usage patterns.
-    var substanceInfo: String {
-        return substance.description
-    }
-    
+
     /// The user's motivation or reason for tracking this addiction.
     var reason: String
     
@@ -52,6 +44,19 @@ final class Addiction {
         return Date().timeIntervalSince(sobrietyDate)
     }
     
+    /// Additional information about the addictive substance.
+    ///
+    /// This property provides detailed information about the addictive substance, including its effects,
+    /// risks, and usage patterns.
+    var substanceInfo: String {
+        return substance.description
+    }
+    
+    
+    /// The savings associated with this addiction.
+    @Relationship(inverse: \Savings.addiction) 
+    var savings = [Savings]()
+    
     /// Initializes an Addiction object with the specified parameters.
     ///
     /// - Parameters:
@@ -62,7 +67,16 @@ final class Addiction {
     ///   - lastMilestone: The date of the user's last milestone achieved for this addiction.
     ///   - nextMilestone: The date of the user's next milestone for this addiction.
     ///   - fellowUsersCount: The number of fellow users who share the same milestone as their next milestone for this addiction.
-    init(substance: Substance, reason: String, isEnabled: Bool, sobrietyDate: Date?, lastMilestone: Date?, nextMilestone: Date?, fellowUsersCount: Int) {
+    ///   - savings: The savings associated with this addiction.
+    init(
+        substance: Substance,
+        reason: String,
+        isEnabled: Bool,
+        sobrietyDate: Date?,
+        lastMilestone: Date?,
+        nextMilestone: Date?,
+        fellowUsersCount: Int
+    ) {
         self.substance = substance
         self.reason = reason
         self.isEnabled = isEnabled
@@ -70,5 +84,6 @@ final class Addiction {
         self.lastMilestone = lastMilestone
         self.nextMilestone = nextMilestone
         self.fellowUsersCount = fellowUsersCount
+        
     }
 }
