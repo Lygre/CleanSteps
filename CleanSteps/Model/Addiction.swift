@@ -54,7 +54,7 @@ final class Addiction {
     
     
     /// The savings associated with this addiction.
-    @Relationship(inverse: \Savings.addiction) 
+    @Relationship(deleteRule: .cascade, inverse: \Savings.addiction)
     var savings = [Savings]()
     
     /// Initializes an Addiction object with the specified parameters.
