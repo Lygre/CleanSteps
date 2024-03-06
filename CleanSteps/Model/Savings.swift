@@ -9,29 +9,10 @@ import Foundation
 import SwiftData
 import CloudKit
 
-import Foundation
-
-/// Enumeration representing the type of savings.
-enum SavingsType: String, Codable, CaseIterable {
-    
-    case money = "Money"
-    case time = "Time"
-    case calories = "Calories"
-    case custom = "Custom"
-    
-}
-
-
-/// Enumeration representing the periodicity at which savings are calculated.
-enum Periodicity: String, Codable, CaseIterable {
-    case perDay = "Per Day"
-    case perWeek = "Per Week"
-}
-
 
 /// Represents the savings tracked for an addiction.
 @Model
-class Savings {
+final class Savings {
     /// The amount saved for the addiction.
     var amountSaved: Double
     
@@ -65,5 +46,25 @@ class Savings {
         self.savingsType = savingsType
         self.periodicity = periodicity
         
+    }
+}
+
+
+extension Savings {
+    /// Enumeration representing the type of savings.
+    enum SavingsType: String, Codable, CaseIterable {
+        
+        case money = "Money"
+        case time = "Time"
+        case calories = "Calories"
+        case custom = "Custom"
+        
+    }
+    
+    
+    /// Enumeration representing the periodicity at which savings are calculated.
+    enum Periodicity: String, Codable, CaseIterable {
+        case perDay = "Per Day"
+        case perWeek = "Per Week"
     }
 }
