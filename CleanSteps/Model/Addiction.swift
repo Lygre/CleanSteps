@@ -29,12 +29,6 @@ final class Addiction {
     /// The date when the user started their sobriety journey for this addiction.
     var sobrietyDate: Date?
     
-    /// The date of the user's last milestone achieved for this addiction.
-    var lastMilestone: Date?
-    
-    /// The date of the user's next milestone for this addiction.
-    var nextMilestone: Date?
-    
     /// The number of fellow users who share the same milestone as their next milestone for this addiction.
     var fellowUsersCount: Int?
     
@@ -56,6 +50,10 @@ final class Addiction {
     /// The savings associated with this addiction.
     @Relationship(deleteRule: .cascade, inverse: \Savings.addiction)
     var savings: [Savings]? = [Savings]()
+    
+    // The milestones associated with this addiction.
+    @Relationship(deleteRule: .cascade, inverse: \Milestone.addiction)
+    var milestones: [Milestone]? = [Milestone]()
     
     /// Initializes an Addiction object with the specified parameters.
     ///
@@ -81,11 +79,29 @@ final class Addiction {
         self.reason = reason
         self.isEnabled = isEnabled
         self.sobrietyDate = sobrietyDate
-        self.lastMilestone = lastMilestone
-        self.nextMilestone = nextMilestone
         self.fellowUsersCount = fellowUsersCount
         
     }
+    
+    /// Method to calculate and return the next milestone based on the current clean time.
+    func calculateNextMilestone() -> Date? {
+        guard let sobrietyDate = sobrietyDate else { return nil }
+        
+        // Calculate the clean time in seconds
+        let cleanTime = Date().timeIntervalSince(sobrietyDate)
+        
+        // Find the next milestone based on the clean time
+        let nextMilestone = Milestone.milestonesInSeconds.first { $0 > cleanTime }
+        
+        // If a next milestone is found, calculate the milestone date
+        if let nextMilestone = nextMilestone {
+            let milestoneDate = Date(timeIntervalSince1970: sobrietyDate.timeIntervalSince1970 + nextMilestone)
+            return milestoneDate
+        }
+        
+        return nil // No next milestone found
+    }
+    
 }
 
 

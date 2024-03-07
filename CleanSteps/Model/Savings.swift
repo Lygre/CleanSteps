@@ -37,7 +37,7 @@ final class Savings {
         unit: String,
         savingsType: SavingsType,
         periodicity: Periodicity,
-        addiction: Addiction?
+        addiction: Addiction
     ) {
         self.amountSaved = amountSaved
         self.savingsType = savingsType
