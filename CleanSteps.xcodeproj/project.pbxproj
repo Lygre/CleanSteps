@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1D84F02BB9B71D00881AC5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D84EF2BB9B71D00881AC5 /* Goal.swift */; };
+		1E1D84F12BB9B71D00881AC5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D84EF2BB9B71D00881AC5 /* Goal.swift */; };
 		1E450C2C2B98498E00479D86 /* CleanStepsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C2B2B98498E00479D86 /* CleanStepsApp.swift */; };
 		1E450C2E2B98498E00479D86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E450C2D2B98498E00479D86 /* ContentView.swift */; };
 		1E450C322B98499000479D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E450C312B98499000479D86 /* Assets.xcassets */; };
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1D84EF2BB9B71D00881AC5 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		1E450C282B98498E00479D86 /* CleanSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E450C2B2B98498E00479D86 /* CleanStepsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanStepsApp.swift; sourceTree = "<group>"; };
 		1E450C2D2B98498E00479D86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 				1E450C5A2B984A5900479D86 /* Addiction.swift */,
 				1E450C612B985DC000479D86 /* Savings.swift */,
 				1E8E20ED2B9977BD00A053BF /* Milestone.swift */,
+				1E1D84EF2BB9B71D00881AC5 /* Goal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1D84F02BB9B71D00881AC5 /* Goal.swift in Sources */,
 				1E8E20F22B99791200A053BF /* TimeInterval.swift in Sources */,
 				1E8E20EE2B9977BD00A053BF /* Milestone.swift in Sources */,
 				1E450C2E2B98498E00479D86 /* ContentView.swift in Sources */,
@@ -322,6 +327,7 @@
 				1E8E20F32B99791200A053BF /* TimeInterval.swift in Sources */,
 				1E450C5C2B984A5900479D86 /* Addiction.swift in Sources */,
 				1E8E20EF2B9977BD00A053BF /* Milestone.swift in Sources */,
+				1E1D84F12BB9B71D00881AC5 /* Goal.swift in Sources */,
 				1E450C632B985DC000479D86 /* Savings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

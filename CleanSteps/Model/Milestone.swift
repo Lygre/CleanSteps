@@ -36,30 +36,6 @@ final class Milestone {
 
 extension Milestone {
     
-    /// Represents a goal or target set by the user for a milestone.
-    struct Goal: Codable {
-        /// Enum representing the type of goal.
-        enum GoalType: String, Codable, CaseIterable {
-            case cleanDays = "Clean Days"
-            case meetingCount = "Meeting Count"
-            case task = "Task"
-        }
-        
-        /// The type of goal.
-        let type: GoalType
-        
-        /// The target value for the goal.
-        ///
-        /// This property specifies the desired target value associated with the goal.
-        let target: Int?
-        
-        /// Additional description for task goals.
-        ///
-        /// This property provides an additional description for task goals, specifying the task to be completed.
-        let taskDescription: String?
-    }
-    
-    
     /// Class property representing recovery milestones in seconds.
     /// This is just a predefined set of milestones to start off with;
     /// Users can and are encouraged to add their own Milestones.
