@@ -18,7 +18,7 @@ final class Milestone {
     /// An array of goals associated with the milestone.
     ///
     /// Users can define multiple goals for each milestone to track their progress and targets.
-    var goals: [Goal] = []
+    var goals: [AnyGoal] = []
     
     /// The addiction associated with this milestone.
     @Relationship var addiction: Addiction?
@@ -28,7 +28,7 @@ final class Milestone {
     /// - Parameters:
     ///   - addiction: The addiction associated with this milestone.
     ///   - goals: The goals associated with this milestone.
-    init(addiction: Addiction, goals: [Goal]) {
+    init(addiction: Addiction, goals: [AnyGoal]) {
         self.addiction = addiction
         self.goals = goals
     }
